@@ -2,6 +2,7 @@
 
 ## Requirements
 - Python 3.6+
+- Git
 
 ## Installing & Running The App
 - Cloning the repo
