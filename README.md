@@ -3,6 +3,7 @@
 ## Requirements
 - Python 3.6+
 - Git
+- Internet connection
 
 ## Installing & Running The App
 - Once you're in the correct directory, clone the repo
