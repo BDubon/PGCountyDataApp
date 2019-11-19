@@ -9,11 +9,6 @@
 git clone https://github.com/BDubon/PGCountyDataApp.git
 ```
 
-- Install Django
-```
-pip install django
-```
-
 - Install the dependencies
 ```
 pip install -r requirements.txt
