@@ -5,7 +5,7 @@
 - Git
 
 ## Installing & Running The App
-- Cloning the repo
+- Once you're in the correct directory, clone the repo
 ```
 git clone https://github.com/BDubon/PGCountyDataApp.git
 ```
