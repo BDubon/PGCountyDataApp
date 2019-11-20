@@ -12,7 +12,7 @@
 
 ### Special instructions if using an IDE other than PyCharm
 - You should create a vritual environment in the directory where you'll clone the project. 
-- Install `virtualenv` to manage installed packages
+- Install `virtualenv` to manage installed packages (you may already have this installed)
 
 *On windows*
 ```
