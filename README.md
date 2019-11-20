@@ -5,6 +5,8 @@
 - Git
 - Internet connection
 
+---
+
 ## Setting up the environment
 *This step is not required but it's recommended to avoid altering the original `Python` installation*
 
