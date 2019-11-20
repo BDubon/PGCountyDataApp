@@ -58,7 +58,7 @@ git clone https://github.com/BDubon/PGCountyDataApp.git
 ```
 pip install -r requirements.txt
 ```
-or for macOS computers
+***macOS computers***
 ```
 pip3 install -r requirements.txt
 ```
