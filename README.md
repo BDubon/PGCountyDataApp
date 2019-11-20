@@ -12,16 +12,7 @@
 
 ### Special instructions if using an IDE other than PyCharm
 - You should create a vritual environment in the directory where you'll clone the project. 
-- Install `virtualenv` to manage installed packages (you may already have this installed)
-
-*On windows*
-```
-python -m pip install --user virtualenv
-```
-*macOS or Linux*
-```
-python3 -m pip install --user virtualenv
-```
+- `venv` is already installed with python 3, so there's no need to install it.
 - Create the virtual environment
 
 *On windows*
