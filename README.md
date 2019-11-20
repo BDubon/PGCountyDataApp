@@ -48,6 +48,8 @@ source env/bin/activate
 deactivate
 ```
 
+---
+
 ## Installing & Running The App
 - Once you're in the correct directory, clone the repo
 ```
