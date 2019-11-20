@@ -12,21 +12,21 @@
 - You should create a vritual environment in the directory where you'll clone the project. 
 - Install `virtualenv` to manage installed packages
 
-***On windows***
+*On windows*
 ```
 python -m pip install --user virtualenv
 ```
-***macOS or Linux***
+*macOS or Linux*
 ```
 python3 -m pip install --user virtualenv
 ```
 - Create the virtual environment
 
-***On windows***
+*On windows*
 ```
 python -m venv env
 ```
-***macOS or Linux***
+*macOS or Linux*
 ```
 python3 -m venv env
 ```
@@ -39,7 +39,7 @@ python3 -m venv env
 ```
 .\env\Scripts\activate
 ```
-***macOS or Linux***
+*macOS or Linux*
 ```
 source env/bin/activate
 ```
@@ -58,7 +58,7 @@ git clone https://github.com/BDubon/PGCountyDataApp.git
 ```
 pip install -r requirements.txt
 ```
-***macOS computers***
+*macOS computers*
 ```
 pip3 install -r requirements.txt
 ```
