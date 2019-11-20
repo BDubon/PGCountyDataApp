@@ -31,8 +31,9 @@ python -m venv env
 python3 -m venv env
 ```
 
-##### Note: You must activate the virtual environment before running the app, otherwise the packages will not be available.
 - Activate the virtual environment
+
+#### Note: You must activate the virtual environment before running the app, otherwise the packages will not be available.
 
 ***On windows***
 ```
