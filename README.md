@@ -10,7 +10,7 @@
 ## Setting up the environment
 *This step is not required but it's recommended to avoid altering the original `Python` installation*
 
-### Special instructions if using an IDE other than PyCharm
+#### Special instructions if using an IDE other than PyCharm
 - You should create a vritual environment in the directory where you'll clone the project. 
 - Install `virtualenv` to manage installed packages
 
