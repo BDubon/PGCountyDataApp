@@ -11,6 +11,7 @@
 ### Special instructions if using an IDE other than PyCharm
 - You should create a vritual environment in the directory where you'll clone the project. 
 - Install `virtualenv` to manage installed packages
+
 ***On windows***
 ```
 python -m pip install --user virtualenv
@@ -20,6 +21,7 @@ python -m pip install --user virtualenv
 python3 -m pip install --user virtualenv
 ```
 - Create the virtual environment
+
 ***On windows***
 ```
 python -m venv env
@@ -31,6 +33,7 @@ python3 -m venv env
 
 ##### Note: You must activate the virtual environment before running the app, otherwise the packages will not be available.
 - Activate the virtual environment
+
 ***On windows***
 ```
 .\env\Scripts\activate
@@ -44,7 +47,7 @@ source env/bin/activate
 deactivate
 ```
 
-
+## Installing & Running The App
 - Once you're in the correct directory, clone the repo
 ```
 git clone https://github.com/BDubon/PGCountyDataApp.git
