@@ -58,8 +58,14 @@ pip install -r requirements.txt
 ```
 pip3 install -r requirements.txt
 ```
+- In the [DataMain Folder](DataMain), create a file called `credentials.py`
+
 - Add your login info and app token to the [credentials.py file](DataMain/credentials.py)
-- To run the app run the following command
+
+- Make sure this file is in your [`.gitignore`](.gitignore) to avoid making your credentials public
+
+
+- To run the app, use the following command
 ```
 python manage.py runserver
 ```
