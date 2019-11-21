@@ -44,6 +44,8 @@ deactivate
 ---
 
 ## Installing & Running The App
+- Before starting, signup and get an app token at the [Prince George's County Data site](https://data.princegeorgescountymd.gov/signup)
+- Then, add your information to the [credentials.py file](DataMain/credentials.py)
 - Once you're in the correct directory, clone the repo
 ```
 git clone https://github.com/BDubon/PGCountyDataApp.git
@@ -62,3 +64,5 @@ pip3 install -r requirements.txt
 ```
 python manage.py runserver
 ```
+
+## Adding Credentials
