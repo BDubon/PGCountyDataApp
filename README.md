@@ -39,6 +39,7 @@ python3 -m venv env
 source env/bin/activate
 ```
 - Deactivating the virtual environment
+
 ``` python
 deactivate
 ```
