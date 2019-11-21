@@ -1,12 +1,16 @@
 {% extends "main_template.html" %}
 {% block content %}
-
+    <ol>
     {% for item in data %}
-        <b>{{ item.payee_name }}</b>
-        <p>{{ item.agency }}</p>
-        <p>${{  item.amount }}</p>
-        <p>{{ item.payment_description }}</p>
+        <li><b>{{ item.payee_name }}</b></li>
+        <ul>
+            <li>{{ item.agency }}</li>
+            <li>${{  item.amount }}</li>
+            <li>{{ item.payment_description }}</li>
+        </ul>
         <br>
     {% endfor %}
+    </ol>
+
 
 {% endblock %}
