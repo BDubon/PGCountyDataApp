@@ -10,7 +10,7 @@ def index(request):
                       APPTOKEN,
                       USERNAME,
                       PASSWORD)
-    results = client.get("364y-gm2b", limit=5000)  # 2017 Data
+    results = client.get("364y-gm2b", limit=50000)  # 2017 Data
 
     return render(request, 'index.html', {'data': results})
 
