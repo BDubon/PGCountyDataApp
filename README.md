@@ -12,7 +12,9 @@
 
 ### Special instructions if using an IDE other than PyCharm
 - You should create a virtual environment in the directory where you'll clone the project. 
+
 - `venv` is already installed with python 3, so there's no need to install it.
+
 - Create the virtual environment
 
 *On windows*
@@ -45,6 +47,7 @@ deactivate
 
 ## Installing & Running The App
 - Before starting, signup and get an app token at the [Prince George's County Data site](https://data.princegeorgescountymd.gov/signup)
+
 - Once you're in the correct directory, clone the repo
 ``` python
 git clone https://github.com/BDubon/PGCountyDataApp.git
