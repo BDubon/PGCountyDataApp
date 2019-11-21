@@ -11,7 +11,7 @@
 *This step is not required but it's recommended to avoid altering the original `Python` installation*
 
 ### Special instructions if using an IDE other than PyCharm
-- You should create a vritual environment in the directory where you'll clone the project. 
+- You should create a virtual environment in the directory where you'll clone the project. 
 - `venv` is already installed with python 3, so there's no need to install it.
 - Create the virtual environment
 
