@@ -1,8 +1,10 @@
+{% load static %}
 {% load bootstrap4 %}
 
 {# Load CSS and JavaScript #}
 {% bootstrap_css %}
 {% bootstrap_javascript jquery='full' %}
+
 
 {# Display django.contrib.messages as Bootstrap alerts #}
 {% bootstrap_messages %}
@@ -12,6 +14,8 @@
 <head>
     <meta charset="UTF-8">
     <title>PG County Data </title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/"/>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/dashboard.css" />
 </head>
 <body>
 
@@ -27,7 +31,7 @@
             <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+            <a class="nav-link" href="{% url 'data' %}">Data</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
@@ -39,27 +43,7 @@
       </div>
     </nav>
 
-    {# MAIN JUMBOTRON   #}
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid">
-            <h1 class="display-4">{{ title|default:"Welcome!" }}</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </p>
-        </div>
-    </div>
-
-    {#  FIRST SECTION  #}
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">{{ section_one }}</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-        </div>
-    </div>
-
+{#    <hr class="my-4">#}
 
     {# Pages' content will load here  #}
     {% block content %}

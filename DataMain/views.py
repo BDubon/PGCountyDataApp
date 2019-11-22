@@ -15,18 +15,18 @@ def index(request):
         'data': results,
         'title': 'Homepage',
         'section_one': 'Homepage Subtitle',
+        'text': 'Sample text for the homepage',
         }
 
     return render(request, 'index.html', context)
 
 
-def blog(request):
+def data(request):
     """ Secondary view can be found at /blog """
     form = 123
     context = {
         'title': 'Blog',
         'form': form,
-        'section_one': 'Blog Subtitle',
         }
 
-    return render(request, 'blog.html', context)
+    return render(request, 'data.html', context)

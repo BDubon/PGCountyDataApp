@@ -1,8 +1,30 @@
 {% extends "main_template.html" %}
 {% block content %}
 
+
+    {# MAIN JUMBOTRON   #}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+            <h1 class="display-4">{{ title|default:"Welcome!" }}</h1>
+            <p class="lead">{{ text }}</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </p>
+        </div>
+    </div>
+
+    {#  FIRST SECTION  #}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">{{ section_one }}</h1>
+            <p class="lead">{{ text }}</p>
+        </div>
+    </div>
+
     {% for item in data %}
-        <ul class="list-group">
+        <ul class="list-group border border-info">
             <li class="list-group-item active bg-dark"><b>Payee:</b> {{ item.payee_name | title }}</li>
             <li class="list-group-item ">{{ item.agency | title }}</li>
             <li class="list-group-item">${{  item.amount }}</li>
