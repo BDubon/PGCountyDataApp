@@ -6,14 +6,8 @@
 {% block content %}
     {% load icon %}
     {#  SEARCH BAR  #}
-    <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand-custom col-sm-3 col-md-2 mr-0" href="#">Data Searcher</a>
-      <input class="form-control form-control-dark w-100" type="text" placeholder="Search Zip" aria-label="Search">
-{#      <ul class="navbar-nav px-3">#}
-{#        <li class="nav-item text-nowrap">#}
-{#          <a class="nav-link" href="#">Sign out</a>#}
-{#        </li>#}
-{#      </ul>#}
+    <nav class="navbar nav navbar-dark bg-dark flex-md-nowrap shadow random sticky-top col-md-10 ml-md-auto col-lg-10 px-4">
+      <input class="form-control form-control-dark w-100" type="text" placeholder="Search Zip Code" aria-label="Search">
     </nav>
 
 
@@ -21,43 +15,25 @@
     <div>
         <div class="container-fluid">
           <div class="row">
-            <nav style="height: 300px class="col-md-2 d-none d-md-block bg-light sidebar">
+            <nav  class="col-md-2 d-none d-md-block bg-light sidebar" >
               <div class="sidebar-sticky">
-                <ul class="nav flex-column">
+                <ul style="list-style: none;" class="nav flex-column">
                   <li class="nav-item">
                     <a class="nav-link active" href="#">
-                      <span {% icon 'trash' class='css-class' %}></span>
+                      <svg {% icon 'home' class='feather feather-home' %}
                       Dashboard <span class="sr-only">(current)</span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">
-                      <span {% icon 'file' %}></span>
+                      <svg {% icon 'file' class='feather feather-file' %}
                       Orders
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">
-                      <span data-feather="shopping-cart"></span>
+                        <svg {% icon 'shopping-cart' class='feather feather-shopping-cart' %}
                       Products
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span data-feather="users"></span>
-                      Customers
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span data-feather="bar-chart-2"></span>
-                      Reports
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span data-feather="layers"></span>
-                      Integrations
                     </a>
                   </li>
                 </ul>
@@ -65,32 +41,14 @@
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                   <span>Saved reports</span>
                   <a class="d-flex align-items-center text-muted" href="#">
-                    <span data-feather="plus-circle"></span>
+                      <svg {% icon 'plus-circle' class='feather feather-plus-circle' %}
                   </a>
                 </h6>
                 <ul class="nav flex-column mb-2">
                   <li class="nav-item">
                     <a class="nav-link" href="#">
-                      <span data-feather="file-text"></span>
+                      <svg {% icon 'file-text' class='feather feather-file-text' %}
                       Current month
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span data-feather="file-text"></span>
-                      Last quarter
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span data-feather="file-text"></span>
-                      Social engagement
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span data-feather="file-text"></span>
-                      Year-end sale
                     </a>
                   </li>
                 </ul>
@@ -98,36 +56,38 @@
             </nav>
 
             {# MAIN AREA HOLDING CHART AND TABLE     #}
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <main role="main" class="col-md-10 ml-md-auto col-lg-10 px-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Dashboard</h1>
-                    <div class="col-sm-6 col-sm-offset-3">
+                    <h1>Dashboard</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group mr-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+
+                            <button type="button" class="btn btn-sm btn-outline-dark">Share</button>
+                            <button type="button" class="btn btn-sm btn-outline-dark">Export</button>
                         </div>
-                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                        <button type="button" class="btn btn-sm btn-outline-dark dropdown-toggle">
                             <span data-feather="calendar"></span>
                             This week
                         </button>
                     </div>
                 </div>
 
-                {#        CHART AREA #}
+                {# CHART AREA #}
                 <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
-                <h2>Important Data</h2>
+                <h1>Important Data</h1>
 
                 {# TABLE #}
                 <div class="table-responsive">
-                <table class="table table-striped table-sm">
+                <table class="table table-striped table-responsive-md">
                   <thead>
                     <tr>
-                      <th>Agency</th>
-                      <th>Payee</th>
-                      <th>Cost</th>
-                      <th>Description</th>
+                      <th class="h6">Agency</th>
+                      <th class="h6">Payee</th>
+                      <th class="h6">Cost</th>
+                      <th class="h6">Description</th>
                     </tr>
+
                   </thead>
                   <tbody>
                     {% for item in data %}
@@ -137,6 +97,7 @@
                             <td>${{  item.amount }}</td>
                             <td>{{ item.payment_description | lower | capfirst}}</td>
                         </tr>
+
                     {% endfor %}
                   </tbody>
                 </table>

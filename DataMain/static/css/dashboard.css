@@ -106,11 +106,6 @@ body {
 }
 
 
-/* text */
-.random {
-  color: #fff;
-}
-
 .footer2 {
   position: fixed;
   left: 0;
@@ -136,4 +131,13 @@ html,body {
     color: white;
     background-color: #202020;
     font-size: 12px;
+}
+
+/* text */
+.random {
+  color: #aeaeae;
+}
+
+.random:hover {
+    color: #ffffff;
 }

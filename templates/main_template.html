@@ -10,122 +10,124 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>PG County Data </title>
+    <head>
+        <meta charset="UTF-8">
+        <title>PG County Data </title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'MDB-Free/css/bootstrap.min.css' %}" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/MDB-Free/css/bootstrap.min.css' %}" />
 
-    <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="{% static 'MDB-Free/css/mdb.min.css' %}" />
+        <!-- Material Design Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/MDB-Free/css/mdb.css' %}" />
 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}" />
-</head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}" />
+    </head>
 
-<body>
+    <body>
 
-    {# MAIN NAVBAR #}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{% url 'index' %}">PG Data</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav px-3">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'data' %}">Data</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        {# MAIN NAVBAR #}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+          <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{% url 'index' %}">PG Data</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav px-3">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'data' %}">Data</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        {# MAIN NAVBAR #}
 
-    {% if alerts %}
-        {% for alert in alerts %}
-          <div class="alert alert-{{ alert.tags }}" role="alert">
-            <center>
-                <strong>
+
+        {# ALERTS (Display under Navbar) #}
+        {% if alerts %}
+            {% for alert in alerts %}
+              <div class="alert alert-{{ alert.tags }} col-md-4 offset-md-4" role="alert">
+                <strong class="justify-content-center">
                     <span>{{ alert.message }}</span>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
+
                 </strong>
-            </center>
-          </div>
-        {% endfor %}
-    {% endif %}
+              </div>
+            {% endfor %}
+        {% endif %}
+        {# ALERTS (Display under Navbar) #}
 
-{#    <hr class="my-4">#}
-
-    {# Pages' content will load here  #}
-    {% block content %}
-    {% endblock %}
-
-    {# TODO: Fix footer positioning  #}
+        {# Pages' content will load here  #}
+        {% block content %}
+        {% endblock %}
+        {# Pages' content will load here  #}
 
 
-    <!-- Footer -->
-    <footer class="page-footer font-small darken-3 bg-dark footerbar">
 
-      <!-- Footer Elements -->
-      <div class="container">
+        {# TODO: Fix footer positioning  #}
+        <!-- Footer -->
+        <footer class="page-footer font-small darken-3 bg-dark footerbar">
 
-        <!-- Grid row-->
-        <div class="row">
+          <!-- Footer Elements -->
+          <div class="container">
 
-          <!-- Grid column -->
-          <div class="col-md-12 py-5">
-            <div class="mb-5 flex-center random text-center">
+            <!-- Grid row-->
+            <div class="row">
 
-              <!-- Facebook -->
-              <a class="fb-ic">
-                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-              </a>
-              <!-- Twitter -->
-              <a class="tw-ic">
-                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-              </a>
-              <!-- Google +-->
-              <a class="gplus-ic">
-                <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-              </a>
-              <!--Linkedin -->
-              <a class="li-ic">
-                <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-              </a>
-              <!--Instagram-->
-              <a class="ins-ic">
-                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-              </a>
-              <!--Pinterest-->
-              <a class="pin-ic">
-                <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
-              </a>
+              <!-- Grid column -->
+              <div class="col-md-12 py-5">
+                <div class="mb-5 flex-center text-center">
+
+                  <!-- Facebook -->
+                  <a href="https://www.facebook.com" class="fb-ic random">
+                    <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  </a>
+                  <!-- Twitter -->
+                  <a  href="#" class="tw-ic random">
+                    <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  </a>
+                  <!-- Github +-->
+                  <a  href="https://github.com/BDubon/PGCountyDataApp" class="gplus-ic random">
+                    <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  </a>
+                  <!--Linkedin -->
+                  <a href="#" class="li-ic random">
+                    <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  </a>
+                  <!--Instagram-->
+                  <a href="#" class="ins-ic random">
+                    <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  </a>
+                  <!--Pinterest-->
+                  <a href="#" class="pin-ic random">
+                    <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                  </a>
+                </div>
+              </div>
+              <!-- Grid column -->
+
             </div>
+            <!-- Grid row-->
+
           </div>
-          <!-- Grid column -->
+          <!-- Footer Elements -->
 
-        </div>
-        <!-- Grid row-->
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3 random">© 2019 Copyright:
+            <a href="https://ischool.umd.edu/">University of Maryland</a>
+          </div>
+          <!-- Copyright -->
 
-      </div>
-      <!-- Footer Elements -->
-
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3 random">© 2019 Copyright:
-        <a href="https://ischool.umd.edu/">University of Maryland</a>
-      </div>
-      <!-- Copyright -->
-
-    </footer>
-<!-- Footer -->
-</body>
+        </footer>
+        <!-- Footer -->
+    </body>
 </html>
