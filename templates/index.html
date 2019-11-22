@@ -4,7 +4,7 @@
 {% block content %}
 
     {# MAIN JUMBOTRON   #}
-    <div class="jumbotron jumbotron-fluid">
+    <div style="margin-bottom: 0" class="jumbotron jumbotron-fluid">
         <div class="container-fluid">
             <h1 class="display-4">{{ title|default:"Welcome!" }}</h1>
             <p class="lead">{{ text }}</p>
@@ -17,7 +17,7 @@
     </div>
 
     {#  FIRST SECTION  #}
-    <div class="jumbotron jumbotron-fluid">
+    <div style="margin: 0" class="jumbotron jumbotron-fluid site-footer">
         <div class="container">
             <h1 class="display-4">{{ section_one }}</h1>
             <p class="lead">{{ text }}</p>

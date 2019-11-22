@@ -80,7 +80,7 @@ body {
  * Navbar
  */
 
-.navbar-brand {
+.navbar-brand-custom {
   padding-top: .75rem;
   padding-bottom: .75rem;
   font-size: 1rem;
@@ -103,4 +103,37 @@ body {
 .form-control-dark:focus {
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+
+/* text */
+.random {
+  color: #fff;
+}
+
+.footer2 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+html,body {
+    position:relative; <!--Also give it a position -->
+    margin:0;
+    padding:0;
+    overflow:auto; <!-- HERE -->
+}
+
+/* --- Footer --- */
+.footerbar {
+    position: relative; <!-- HERE -->
+    width: 100%;
+    bottom: 0;
+    color: white;
+    background-color: #202020;
+    font-size: 12px;
 }
