@@ -30,7 +30,7 @@ python3 -m venv env
 
 ##### *Note: You must activate the virtual environment before running the app, otherwise the packages will not be available.*
 
-***On windows***
+*On windows*
 ```
 .\env\Scripts\activate
 ```
