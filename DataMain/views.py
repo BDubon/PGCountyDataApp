@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from sodapy import Socrata
 from .credentials import APPTOKEN, USERNAME, PASSWORD
 
-LIMIT = 3000  # Total number of records to request from the API
+LIMIT = 300  # Total number of records to request from the API
 
 
 # Create your views here.
