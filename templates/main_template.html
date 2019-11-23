@@ -30,10 +30,10 @@
 
     <body>
 
-        {# ALERTS (Display under Navbar) #}
+        {# ALERTS (Display bottom left corner) #}
         {% if alerts %}
             {% for alert in alerts %}
-              <div class="alert alert-{{ alert.tags }} col-3 offset-1 fixed-bottom shadow-lg fade show text-center" role="alert">
+              <div class="alert alert-{{ alert.tags }} col-3 offset-8 fixed-top shadow-lg fade show in text-center mt-5" role="alert">
                 <strong class="justify-content-center">
                     <span>{{ alert.message }}</span>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -43,7 +43,7 @@
               </div>
             {% endfor %}
         {% endif %}
-        {# ALERTS (Display under Navbar) #}
+        {# ALERTS (Display bottom left corner) #}
 
         {# MAIN NAVBAR #}
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -64,13 +64,10 @@
         </nav>
         {# MAIN NAVBAR #}
 
-
-
-
-        {# Pages' content will load here  #}
+        {# CONTENT  #}
         {% block content %}
         {% endblock %}
-        {# Pages' content will load here  #}
+        {# CONTENT  #}
 
 
 
