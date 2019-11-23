@@ -12,7 +12,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>PG County Data </title>
+        <title>DataTron | {{ page_title }} </title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
@@ -24,7 +24,13 @@
 
         <!-- Material Design Bootstrap -->
         <link rel="stylesheet" type="text/css" href="{% static 'css/MDB-Free/css/mdb.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/DataTables/datatables.min.css' %}" />
 
+        <!-- DataTables -->
+        <script type="text/javascript" src="{% static 'css/DataTables/datatables.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'css/DataTables/dataTables.bootstrap4.min.js' %}"></script>
+
+        <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}" />
     </head>
 
@@ -47,11 +53,11 @@
 
         {# MAIN NAVBAR #}
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-          <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-center" href="{% url 'index' %}">DataTron</a>
+          <a class="navbar-brand col-1 ml-4 text-right" href="{% url 'index' %}">DataTron</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="collapse navbar-collapse ml-4" id="navbarNav">
             <ul class="navbar-nav px-3">
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
@@ -68,8 +74,6 @@
         {% block content %}
         {% endblock %}
         {# CONTENT  #}
-
-
 
         {# TODO: Fix footer positioning  #}
         <!-- Footer -->
@@ -106,8 +110,8 @@
                     <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                   </a>
                   <!--Pinterest-->
-                  <a href="#" class="pin-ic random">
-                    <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                  <a href="#" class="pin-ic">
+                    <i class="fab fa-pinterest fa-lg white-text fa-2x random"> </i>
                   </a>
                 </div>
               </div>
@@ -120,8 +124,8 @@
           <!-- Footer Elements -->
 
           <!-- Copyright -->
-          <div class="footer-copyright text-center py-3 random">© 2019 Copyright:
-            <a href="https://ischool.umd.edu/">University of Maryland</a>
+          <div class="footer-copyright text-center py-3 random">© 2019 Copyright  |
+            <a href="https://ischool.umd.edu/">  University of Maryland</a>
           </div>
           <!-- Copyright -->
 

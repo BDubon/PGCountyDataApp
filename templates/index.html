@@ -4,22 +4,21 @@
 {% block content %}
 
     {# MAIN JUMBOTRON   #}
-    <div style="margin-bottom: 0" class="jumbotron jumbotron-fluid bg-light">
-        <div class="container-fluid col-10 ml-auto">
-            <h1 class="display-4">{{ title|default:"Welcome!" }}</h1>
-            <p class="lead">{{ title_text }}</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </p>
+
+    <div class="jumbotron card card-image m-0" style="background-image: url(https://i.pinimg.com/originals/93/b3/d2/93b3d2a0309badd7e6fd338ebccab5af.jpg);">
+      <div class="text-light text-center py-5 px-4">
+        <div>
+          <h1 class="card-title h1 pt-3 mb-5 font-bold"><strong>{{ title|default:"Welcome!" }}</strong></h1>
+          <h4 class="mx-5 mb-5 h4-responsive">{{ title_text }}</h4>
+          <a class="btn btn-outline-light btn-md" href="{% url 'data' %}"><i class="fas fa-clone left"></i>LEARN MORE</a>
         </div>
+      </div>
     </div>
 
     {#  FIRST SECTION  #}
     <div style="margin: 0" class="jumbotron jumbotron-fluid bg-white">
         <div class="container col-8 ml-auto">
-            <h1 class="display-4">{{ subtitle }}</h1>
+            <h1 class="h1">{{ subtitle }}</h1>
             <p class="lead">{{ subtitle_text }}</p>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias culpa cumque dolore
@@ -66,6 +65,31 @@
                 ipsam maiores quia soluta ut voluptatem. Dicta!
             </p>
         </div>
+    </div>
+
+    {# SECOND SECTION #}
+    <div class="jumbotron text-center darken-3 text-dark bg-light m-0">
+      <!-- Title -->
+      <h2 class="card-title h2">Subsection To Highlight Things</h2>
+      <!-- Subtitle -->
+      <p class="my-4 h6">Introduction for the subsection</p>
+      <!-- Grid row -->
+      <div class="row d-flex justify-content-center">
+        <!-- Grid column -->
+        <div class="col-xl-7 pb-2">
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea
+              distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium, fugit consequatur
+              ducimus obcaecati numquam molestias hic itaque accusantium doloremque laudantium, totam rem aperiam.
+          </p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+      <hr class="my-4 rgba-white-light">
+      <div class="pt-2">
+        <button type="button" class="btn btn-outline-dark">Link 1<i class="far fa-gem ml-1"></i></button>
+        <button type="button" class="btn btn-outline-dark">Link 2<i class="fas fa-download ml-1"></i></button>
+      </div>
     </div>
 
 {% endblock %}
