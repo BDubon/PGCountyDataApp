@@ -33,7 +33,7 @@
         {# ALERTS (Display under Navbar) #}
         {% if alerts %}
             {% for alert in alerts %}
-              <div class="alert alert-{{ alert.tags }} col-4 offset-1 fixed-bottom shadow-lg fade show" role="alert">
+              <div class="alert alert-{{ alert.tags }} col-3 offset-1 fixed-bottom shadow-lg fade show text-center" role="alert">
                 <strong class="justify-content-center">
                     <span>{{ alert.message }}</span>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -47,7 +47,7 @@
 
         {# MAIN NAVBAR #}
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-          <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{% url 'index' %}">PG Data</a>
+          <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-center" href="{% url 'index' %}">DataTron</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

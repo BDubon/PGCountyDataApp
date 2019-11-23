@@ -7,7 +7,7 @@
     <div style="margin-bottom: 0" class="jumbotron jumbotron-fluid">
         <div class="container-fluid col-10 ml-auto">
             <h1 class="display-4">{{ title|default:"Welcome!" }}</h1>
-            <p class="lead">{{ text }}</p>
+            <p class="lead">{{ title_text }}</p>
             <hr class="my-4">
             <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
             <p class="lead">
@@ -19,8 +19,8 @@
     {#  FIRST SECTION  #}
     <div style="margin: 0" class="jumbotron jumbotron-fluid bg-light">
         <div class="container col-8 ml-auto">
-            <h1 class="display-4">{{ section_one }}</h1>
-            <p class="lead">{{ text }}</p>
+            <h1 class="display-4">{{ subtitle }}</h1>
+            <p class="lead">{{ subtitle_text }}</p>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias culpa cumque dolore
                 exercitationem illo iste nihil, officia quae repudiandae voluptate? Eos facilis incidunt

@@ -13,9 +13,10 @@ def index(request):
     template = 'index.html'
 
     context = {
-        'title': 'Homepage',
-        'section_one': 'Homepage Subtitle',
-        'text': 'Sample text for the homepage',
+        'title': 'WELCOME!',
+        'title_text': 'The Best Place to View Data.',
+        'subtitle': 'About',
+        'subtitle_text': 'Some Clever Line.',
         'alerts': [
             {
                 'tags': 'primary',
