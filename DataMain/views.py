@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from sodapy import Socrata
 from .credentials import APPTOKEN, USERNAME, PASSWORD
 
-LIMIT = 30   # Total number of records to request from the API
+LIMIT = 3000  # Total number of records to request from the API
 
 
 # Create your views here.
@@ -13,7 +13,8 @@ def index(request):
     template = 'index.html'
 
     context = {
-        'title': 'WELCOME!',
+        'page_title': 'Home',
+        'title': 'VISIT OUR DATA DASHBOARD!!',
         'title_text': 'The Best Place to View Data.',
         'subtitle': 'About',
         'subtitle_text': 'Some Clever Line.',
@@ -35,10 +36,11 @@ def index(request):
 def data(request):
     """ Secondary view can be found at /data """
     client = Socrata('data.princegeorgescountymd.gov', APPTOKEN, USERNAME, PASSWORD)
-    received_data = client.get("364y-gm2b", limit=LIMIT)  # 2017 Data
+    received_data = client.get("2qma-7ez9", limit=LIMIT)  # 2018 Data
     template = 'data.html'
 
     context = {
+        'page_title': 'Data',
         'title': 'Blog',
         'data': received_data,
         'alerts': [
