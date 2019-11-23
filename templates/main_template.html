@@ -17,19 +17,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
 
         <!-- MaterialDesign Bootstrap -->
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-        <!-- Bootstrap core CSS -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Material Design Bootstrap -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
-        <!-- JQuery -->
+
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <!-- Bootstrap tooltips -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
 
         <!-- DataTables -->
@@ -47,7 +40,7 @@
 
     <body>
 
-        {# ALERTS (Display bottom left corner) #}
+        {# ALERTS (Display bottom top right) #}
         {% if alerts %}
             {% for alert in alerts %}
               <div class="alert alert-{{ alert.tags }} col-3 offset-8 fixed-top shadow-lg fade show in text-center mt-5" role="alert">
@@ -60,7 +53,7 @@
               </div>
             {% endfor %}
         {% endif %}
-        {# ALERTS (Display bottom left corner) #}
+        {# ALERTS (Display bottom top right) #}
 
         {# MAIN NAVBAR #}
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -91,55 +84,36 @@
         <footer class="page-footer font-small darken-3 bg-dark footerbar">
 
           <!-- Footer Elements -->
-          <div class="container">
+            <div class="container">
 
-            <!-- Grid row-->
-            <div class="row">
-
-              <!-- Grid column -->
-              <div class="col-md-12 py-5">
-                <div class="mb-5 flex-center text-center">
-
-                  <!-- Facebook -->
-                  <a href="https://www.facebook.com" class="fb-ic random">
-                    <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                  </a>
-                  <!-- Twitter -->
-                  <a  href="#" class="tw-ic random">
-                    <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                  </a>
-                  <!-- Github +-->
-                  <a  href="https://github.com/BDubon/PGCountyDataApp" class="gplus-ic random">
-                    <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                  </a>
-                  <!--Linkedin -->
-                  <a href="#" class="li-ic random">
-                    <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                  </a>
-                  <!--Instagram-->
-                  <a href="#" class="ins-ic random">
-                    <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                  </a>
-                  <!--Pinterest-->
-                  <a href="#" class="pin-ic">
-                    <i class="fab fa-pinterest fa-lg white-text fa-2x random"> </i>
-                  </a>
+                <!-- Grid row-->
+                <div class="row">
+                  <!-- Grid column -->
+                    <div class="col-md-12 py-5">
+                        <div class="mb-5 flex-center text-center">
+                            <!-- Github +-->
+                            <a  href="https://github.com/BDubon/PGCountyDataApp" class="gplus-ic random">
+                                <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com" class="fb-ic random">
+                                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!-- Twitter -->
+                            <a  href="#" class="tw-ic random">
+                                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <!-- Grid column -->
-
             </div>
-            <!-- Grid row-->
 
-          </div>
-          <!-- Footer Elements -->
-
-          <!-- Copyright -->
-          <div class="footer-copyright text-center py-3 random">© 2019 Copyright  |
-            <a href="https://ischool.umd.edu/">  University of Maryland</a>
-          </div>
-          <!-- Copyright -->
-
+            <!-- Footer Elements -->
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3 random">© 2019 Copyright  |
+                <a href="https://ischool.umd.edu/">  University of Maryland</a>
+            </div>
+            <!-- Copyright -->
         </footer>
         <!-- Footer -->
     </body>
