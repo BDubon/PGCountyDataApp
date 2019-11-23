@@ -5,7 +5,7 @@
 
     {# MAIN JUMBOTRON   #}
     <div style="margin-bottom: 0" class="jumbotron jumbotron-fluid">
-        <div class="container-fluid">
+        <div class="container-fluid col-10 ml-auto">
             <h1 class="display-4">{{ title|default:"Welcome!" }}</h1>
             <p class="lead">{{ text }}</p>
             <hr class="my-4">
@@ -18,7 +18,7 @@
 
     {#  FIRST SECTION  #}
     <div style="margin: 0" class="jumbotron jumbotron-fluid bg-light">
-        <div class="container">
+        <div class="container col-8 ml-auto">
             <h1 class="display-4">{{ section_one }}</h1>
             <p class="lead">{{ text }}</p>
             <p>

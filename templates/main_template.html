@@ -33,7 +33,7 @@
         {# ALERTS (Display under Navbar) #}
         {% if alerts %}
             {% for alert in alerts %}
-              <div class="alert alert-{{ alert.tags }} col-md-3 offset-8 fixed-bottom fade show" role="alert">
+              <div class="alert alert-{{ alert.tags }} col-4 offset-1 fixed-bottom shadow-lg fade show" role="alert">
                 <strong class="justify-content-center">
                     <span>{{ alert.message }}</span>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
