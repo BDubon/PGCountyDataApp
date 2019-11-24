@@ -9,7 +9,7 @@ from .credentials import APPTOKEN, USERNAME, PASSWORD
 # Class Based Views reference guide http://ccbv.co.uk/
 
 
-LIMIT = 50  # Total number of records to request from the API
+LIMIT = 3000  # Total number of records to request from the API
 
 
 def index(request):
