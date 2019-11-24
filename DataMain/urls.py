@@ -1,7 +1,8 @@
 from django.urls import path, include
-from . import views
+from .views import index, data, ChartData
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('data/', views.data, name='data'),
+    path('', index, name='index'),
+    path('data/', data, name='data'),
+    path('api/chart/data/', ChartData.as_view())
     ]

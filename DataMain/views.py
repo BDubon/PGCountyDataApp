@@ -1,13 +1,15 @@
 from django.shortcuts import render
 from django.contrib import messages
 from django.http import HttpResponse
+from rest_framework.views import APIView
+from rest_framework.response import Response
 from sodapy import Socrata
 from .credentials import APPTOKEN, USERNAME, PASSWORD
 
 # Class Based Views reference guide http://ccbv.co.uk/
 
 
-LIMIT = 500  # Total number of records to request from the API
+LIMIT = 50  # Total number of records to request from the API
 
 
 def index(request):
@@ -23,7 +25,7 @@ def index(request):
         'alerts': [
             {
                 'tags': 'primary',
-                'message': 'Try Version 2.5!',
+                'message': 'Try Version 1.0!',
             },
             {
                 'tags': 'warning',
@@ -61,3 +63,16 @@ def data(request):
     # messages.add_message(request, messages.WARNING, 'You Suck defwge rver gvercgvf ergvfdv rv f gf vdfvd  v fced!')
 
     return render(request, template, context)
+
+
+class ChartData(APIView):
+    authentication_classes = []
+    permission_classes = []
+
+    def get(self, request, format=None):
+        client = Socrata('data.princegeorgescountymd.gov', APPTOKEN, USERNAME, PASSWORD)
+        received_data = client.get("2qma-7ez9", limit=LIMIT)  # 2018 Data
+
+        return Response(received_data)
+
+
