@@ -74,7 +74,7 @@
         {# CONTENT  #}
 
         {# FOOTER #}
-        <footer class="page-footer font-small darken-3 bg-dark">
+        <footer class="page-footer font-small darken-3 {% if page_title == 'Home' %} mt-0 {% else %} mt-4 {% endif %}bg-dark">
             <div class="footer-copyright text-center py-3">
                 <a href="https://github.com/BDubon/PGCountyDataApp">
                     <i class="fab fa-github fa-lg white-text mt-2 mb-3 fa-2x"> </i>
