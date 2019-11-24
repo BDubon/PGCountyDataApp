@@ -32,7 +32,6 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}" />
     </head>
 
-
     <body>
 
         {# ALERTS (Display bottom top right) #}
@@ -74,42 +73,22 @@
         {% endblock %}
         {# CONTENT  #}
 
-        {# TODO: Fix footer positioning  #}
-        <!-- Footer -->
-        <footer class="page-footer font-small darken-3 bg-dark footerbar">
-
-          <!-- Footer Elements -->
-            <div class="container">
-
-                <!-- Grid row-->
-                <div class="row">
-                  <!-- Grid column -->
-                    <div class="col-md-12 py-5">
-                        <div class="mb-5 flex-center text-center">
-                            <!-- Github +-->
-                            <a  href="https://github.com/BDubon/PGCountyDataApp" class="gplus-ic random">
-                                <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                            </a>
-                            <!-- Facebook -->
-                            <a href="https://www.facebook.com" class="fb-ic random">
-                                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                            </a>
-                            <!-- Twitter -->
-                            <a  href="#" class="tw-ic random">
-                                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                            </a>
-                        </div>
-                    </div>
+        {# FOOTER #}
+        <footer class="page-footer font-small darken-3 bg-dark">
+            <div class="footer-copyright text-center py-3">
+                <a href="https://github.com/BDubon/PGCountyDataApp">
+                    <i class="fab fa-github fa-lg white-text mt-2 mb-3 fa-2x"> </i>
+                </a>
+                <div>
+                    © 2019 Copyright  |
+                    <a href="https://ischool.umd.edu/">
+                        University of Maryland
+                    </a>
                 </div>
-            </div>
-
-            <!-- Footer Elements -->
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3 random">© 2019 Copyright  |
-                <a href="https://ischool.umd.edu/">  University of Maryland</a>
             </div>
             <!-- Copyright -->
         </footer>
-        <!-- Footer -->
+        {# FOOTER #}
+
     </body>
 </html>
