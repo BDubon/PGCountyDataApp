@@ -137,10 +137,7 @@ STATIC_TMP = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'DataMain/static/')
-)
+STATICFILES_DIRS = ()
    
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
