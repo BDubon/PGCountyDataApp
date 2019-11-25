@@ -26,7 +26,9 @@ SECRET_KEY = 'c4hv=h_fy)pv72)05r)wmw2q*7%%$4fang_1)t1clmw=nv5%h)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '**.herokuapp.com',
+]
 
 
 # Application definition
@@ -131,15 +133,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 STATIC_TMP = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-    )
-
+    os.path.join(BASE_DIR, 'DataMain/static/')
+)
+   
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -149,5 +151,4 @@ GRAPPELLI_ADMIN_TITLE = 'DataTron | Admin'
 GRAPPELLI_SWITCH_USER = True
 
 # Activate Django-Heroku.
-
 django_heroku.settings(locals())
