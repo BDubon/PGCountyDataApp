@@ -6,6 +6,4 @@ urlpatterns = [
     path('', index, name='index'),
     path('data/', data, name='data'),
     path('api/chart/data/', ChartData.as_view()),
-    path('grappelli/', include('grappelli.urls')),  # grappelli URLS
-    path('admin/', admin.site.urls),  # admin site
     ]
