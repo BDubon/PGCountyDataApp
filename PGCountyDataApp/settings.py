@@ -145,11 +145,11 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
-
-
 # Grappelli Settings - Custom Admin UI
 GRAPPELLI_ADMIN_TITLE = 'DataTron | Admin'
 GRAPPELLI_SWITCH_USER = True
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
+
 
